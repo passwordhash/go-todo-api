@@ -1,9 +1,10 @@
-DROP TABLE if exists lists_items;
+DROP TABLE lists_items;
 
-DROP TABLE if exists users_lists;
+DROP TABLE users_lists;
 
-DROP TABLE if exists todo_lists;
+DROP TABLE todo_lists;
 
-DROP TABLE if exists users;
+DROP TABLE users;
 
-DROP TABLE if exists todo_items;
+DROP TABLE todo_items;
+

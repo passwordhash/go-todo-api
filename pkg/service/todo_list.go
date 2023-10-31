@@ -1,8 +1,8 @@
 package service
 
 import (
-	"todo"
-	"todo/pkg/repository"
+	"github.com/zhashkevych/todo-app"
+	"github.com/zhashkevych/todo-app/pkg/repository"
 )
 
 type TodoListService struct {
@@ -21,17 +21,18 @@ func (s *TodoListService) GetAll(userId int) ([]todo.TodoList, error) {
 	return s.repo.GetAll(userId)
 }
 
-func (s *TodoListService) GetById(userId int, id int) (todo.TodoList, error) {
-	return s.repo.GetById(userId, id)
+func (s *TodoListService) GetById(userId, listId int) (todo.TodoList, error) {
+	return s.repo.GetById(userId, listId)
 }
 
-func (s *TodoListService) Delete(userId int, id int) error {
-	return s.repo.Delete(userId, id)
+func (s *TodoListService) Delete(userId, listId int) error {
+	return s.repo.Delete(userId, listId)
 }
 
-func (s *TodoListService) Update(userId int, id int, input todo.UpdateListInput) error {
+func (s *TodoListService) Update(userId, listId int, input todo.UpdateListInput) error {
 	if err := input.Validate(); err != nil {
 		return err
 	}
-	return s.repo.Update(userId, id, input)
+
+	return s.repo.Update(userId, listId, input)
 }

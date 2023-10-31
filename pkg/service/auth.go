@@ -5,15 +5,15 @@ import (
 	"errors"
 	"fmt"
 	"github.com/dgrijalva/jwt-go"
+	"github.com/zhashkevych/todo-app"
+	"github.com/zhashkevych/todo-app/pkg/repository"
 	"time"
-	"todo"
-	"todo/pkg/repository"
 )
 
 const (
-	salt       = "zxcvzxvew5252bcv"
-	signingKey = "asasfdf34563gnj$$asdg$"
-	tokenTTL   = 24 * time.Hour
+	salt       = "hjqrhjqw124617ajfhajs"
+	signingKey = "qrkjk#4#%35FSFJlja#4353KSFjH"
+	tokenTTL   = 12 * time.Hour
 )
 
 type tokenClaims struct {
@@ -36,19 +36,17 @@ func (s *AuthService) CreateUser(user todo.User) (int, error) {
 
 func (s *AuthService) GenerateToken(username, password string) (string, error) {
 	user, err := s.repo.GetUser(username, generatePasswordHash(password))
-	fmt.Println(user)
 	if err != nil {
 		return "", err
 	}
 
-	token := jwt.NewWithClaims(jwt.SigningMethodHS256, tokenClaims{
+	token := jwt.NewWithClaims(jwt.SigningMethodHS256, &tokenClaims{
 		jwt.StandardClaims{
 			ExpiresAt: time.Now().Add(tokenTTL).Unix(),
 			IssuedAt:  time.Now().Unix(),
 		},
 		user.Id,
 	})
-	fmt.Println("token ", token)
 
 	return token.SignedString([]byte(signingKey))
 }
