@@ -2,7 +2,8 @@ package handler
 
 import (
 	"github.com/gin-gonic/gin"
-	"github.com/zhashkevych/todo-app"
+	"todo"
+
 	"net/http"
 	"strconv"
 )

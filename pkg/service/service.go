@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/zhashkevych/todo-app"
-	"github.com/zhashkevych/todo-app/pkg/repository"
+	"todo"
+	"todo/pkg/repository"
 )
 
 //go:generate mockgen -source=service.go -destination=mocks/mock.go

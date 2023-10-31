@@ -2,9 +2,9 @@ package handler
 
 import (
 	"net/http"
+	"todo"
 
 	"github.com/gin-gonic/gin"
-	"github.com/zhashkevych/todo-app"
 )
 
 // @Summary SignUp

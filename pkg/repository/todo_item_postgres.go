@@ -3,8 +3,8 @@ package repository
 import (
 	"fmt"
 	"github.com/jmoiron/sqlx"
-	"github.com/zhashkevych/todo-app"
 	"strings"
+	"todo"
 )
 
 type TodoItemPostgres struct {

@@ -32,6 +32,7 @@ require (
 	github.com/swaggo/gin-swagger v1.3.0
 	github.com/swaggo/swag v1.7.0
 	github.com/zhashkevych/go-sqlxmock v1.5.2-0.20201023121933-f973d0041cfc
+	github.com/zhashkevych/todo-app v0.0.0-20210427082504-1789ed69bd5f // indirect
 	golang.org/x/net v0.0.0-20201207224615-747e23833adb // indirect
 	golang.org/x/tools v0.0.0-20201208062317-e652b2f42cc7 // indirect
 	google.golang.org/protobuf v1.25.0 // indirect

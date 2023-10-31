@@ -1,8 +1,8 @@
 package service
 
 import (
-	"github.com/zhashkevych/todo-app"
-	"github.com/zhashkevych/todo-app/pkg/repository"
+	"todo"
+	"todo/pkg/repository"
 )
 
 type TodoListService struct {
